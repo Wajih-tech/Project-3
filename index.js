@@ -24,6 +24,7 @@ const notFound = fs.readFileSync("./notFound.html","utf-8");
 const contact = fs.readFileSync("./contact.html","utf-8");
 const about = fs.readFileSync("./about.html","utf-8");
 const chart = fs.readFileSync("./chart.html","utf-8");
+const howitworks = fs.readFileSync("./howitworks.html","utf-8");
 
  const server = http.createServer((req,res)=>{
     if (req.url === "/"){
@@ -37,6 +38,9 @@ const chart = fs.readFileSync("./chart.html","utf-8");
        }
     if (req.url === "/chart"){
         return res.end(chart);
+       } 
+    if (req.url === "/howitworks"){
+        return res.end(howitworks);
        }   else {
        return res.end(notFound);
      }
