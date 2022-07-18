@@ -32,6 +32,9 @@ const chart = fs.readFileSync("./chart.html","utf-8");
      if (req.url === "/about"){
        return res.end(about);
     }
+     if (req.url === "/contact"){
+        return res.end(contact);
+       }
     if (req.url === "/chart"){
         return res.end(chart);
        }   else {
